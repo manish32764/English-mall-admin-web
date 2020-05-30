@@ -78,7 +78,7 @@ Add
       </el-form>
       <span slot="footer" class="dialog-footer">
 <el-button @click = "dialogVisible = false" >Cancel</el-button>
-<el-button type="primary” @click ="handleConfirm ('productAttrCatForm' ) "> OK</el-button>
+<el-button type="primary" @click ="handleConfirm ('productAttrCatForm' ) "> OK</el-button>
       </span>
     </el-dialog>
   </div>
@@ -124,7 +124,7 @@ Add
       },
       addProductAttrCate() {
         this.dialogVisible = true;
-this.dialogTitle = “Add Type”;
+this.dialogTitle = "Add Type";
       },
       handleSizeChange(val) {
         this.listQuery.pageNum = 1;
@@ -153,7 +153,7 @@ message: 'Delete successful',
       },
       handleUpdate(index, row) {
         this.dialogVisible = true;
-this.dialogTitle = “Edit Type”;
+this.dialogTitle = "Edit Type";
         this.productAttrCate.name = row.name;
         this.productAttrCate.id = row.id;
       },
@@ -168,7 +168,7 @@ this.dialogTitle = “Edit Type”;
           if (valid) {
             let data = new URLSearchParams();
             data.append("name",this.productAttrCate.name);
-if (this.dialogTitle=== “Add type”) {
+if (this.dialogTitle=== "Add type") {
               createProductAttrCate(data).then(response=>{
                 this.$message({
 message: 'Add successful',

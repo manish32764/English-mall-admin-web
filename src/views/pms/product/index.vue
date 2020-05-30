@@ -21,10 +21,10 @@ Reset
       <div style="margin-top: 15px">
         <el-form :inline="true" :model="listQuery" size="small" label-width="140px">
 <el-form-item label="输入搜索：">
-<el-input style="width:203px” v-model="listQuery.keyword” placehold er= “Product Name” > </el-input>
+<el-input style="width:203px" v-model="listQuery.keyword" placehold er= "Product Name" > </el-input>
           </el-form-item>
 <el-form-item label="商品货号：">
-<el-input style="width:203px” v-model="listQuery.productSn” placeho lder= “Item number” > </el-input>
+<el-input style="width:203px" v-model="listQuery.productSn" placeho lder= "Item number" > </el-input>
           </el-form-item>
 <el-form-item label="商品分类：">
             <el-cascader
@@ -34,7 +34,7 @@ Reset
             </el-cascader>
           </el-form-item>
 <el-form-item label="商品品牌：">
-<el-select v-model="listQuery.brandId” placeholder="Please select a brand” clearable >
+<el-select v-model="listQuery.brandId" placeholder="Please select a brand" clearable >
               <el-option
                 v-for="item in brandOptions"
                 :key="item.value"
@@ -44,7 +44,7 @@ Reset
             </el-select>
           </el-form-item>
 <el-form-item label="上架状态：">
-<el-select v-model="listQuery.publishStatus” placeholder="all” cleara ble>
+<el-select v-model="listQuery.publishStatus" placeholder="all" cleara ble>
               <el-option
                 v-for="item in publishStatusOptions"
                 :key="item.value"
@@ -54,7 +54,7 @@ Reset
             </el-select>
           </el-form-item>
 <el-form-item label="审核状态：">
-<el-select v-model="listQuery.verifyStatus” placeholder="all” clearab le>
+<el-select v-model="listQuery.verifyStatus" placeholder="all" clearab le>
               <el-option
                 v-for="item in verifyStatusOptions"
                 :key="item.value"
@@ -182,7 +182,7 @@ Add
     <div class="batch-operate-container">
       <el-select
         size="small"
-v-model="operateType” placeholder="Bulk Operation">
+v-model="operateType" placeholder="Bulk Operation">
         <el-option
           v-for="item in operates"
           :key="item.value"
@@ -212,19 +212,19 @@ OK
       </el-pagination>
     </div>
     <el-dialog
-title= “Edit product information”
+title= "Edit product information"
       :visible.sync="editSkuInfo.dialogVisible"
       width="40%">
 <span>Item Item Number:</span>
       <span>{{editSkuInfo.productSn}}</span>
-<el-input placeholder="Search by sku number” v-model="editSkuInfo.keyword” size= “small” style="width: 50%; margin-left: 20px ">
+<el-input placeholder="Search by sku number" v-model="editSkuInfo.keyword" size= "small" style="width: 50%; margin-left: 20px ">
         <el-button slot="append" icon="el-icon-search" @click="handleSearchEditSku"></el-button>
       </el-input>
       <el-table style="width: 100%;margin-top: 20px"
                 :data="editSkuInfo.stockList"
                 border>
         <el-table-column
-label="SKU number”
+label="SKU number"
           align="center">
           <template slot-scope="scope">
             <el-input v-model="scope.row.skuCode"></el-input>
@@ -240,7 +240,7 @@ label="SKU number”
           </template>
         </el-table-column>
         <el-table-column
-label= “Selling Price”
+label= "Selling Price"
           width="80"
           align="center">
           <template slot-scope="scope">
@@ -248,7 +248,7 @@ label= “Selling Price”
           </template>
         </el-table-column>
         <el-table-column
-label= “Product inventory”
+label= "Product inventory"
           width="80"
           align="center">
           <template slot-scope="scope">
@@ -256,7 +256,7 @@ label= “Product inventory”
           </template>
         </el-table-column>
         <el-table-column
-label= “Inventory alert value”
+label= "Inventory alert value"
           width="100"
           align="center">
           <template slot-scope="scope">
@@ -266,7 +266,7 @@ label= “Inventory alert value”
       </el-table>
       <span slot="footer" class="dialog-footer">
 <el-button @click = "editSkuInfo.dialogVisible = false" >Cancel </el-button>
-<el-button type="primary” @click ="handleEditSkuConfirm "> OK </el-button>
+<el-button type="primary" @click ="handleEditSkuConfirm "> OK </el-button>
       </span>
     </el-dialog>
   </div>
@@ -309,35 +309,35 @@ label= “Inventory alert value”
         },
         operates: [
           {
-label: “Product Listing”,
+label: "Product Listing",
             value: "publishOn"
           },
           {
-label: “Commodity Drop”,
+label: "Commodity Drop",
             value: "publishOff"
           },
           {
-label: “Set as recommended”,
+label: "Set as recommended",
             value: "recommendOn"
           },
           {
-label: “Cancel the recommendation”,
+label: "Cancel the recommendation",
             value: "recommendOff"
           },
           {
-label: “Set New”,
+label: "Set New",
             value: "newOn"
           },
           {
-label: “Cancel new”,
+label: "Cancel new",
             value: "newOff"
           },
           {
-label: “Transfer to Category”,
+label: "Transfer to Category",
             value: "transferCategory"
           },
           {
-label: “Move into the Recycle Bin”,
+label: "Move into the Recycle Bin",
             value: "recycle"
           }
         ],

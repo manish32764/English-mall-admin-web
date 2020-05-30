@@ -17,7 +17,7 @@ router.beforeEach((to, from, next) => {
 store.dispatch ('GetInfo') .then (res => {//pulling user information
           let menus=res.data.menus;
           let username=res.data.username;
-store.dispatch ('GenerateRoutes', {menus, username}) .then () => {// Generate accessible routing tables
+store.dispatch ('GenerateRoutes', {menus, username}) .then(() => {// Generate accessible routing tables
 router.addRoutes (store.getters.addRouters);//Add an accessible route table on the go
             next({ ...to, replace: true })
           })

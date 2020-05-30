@@ -17,7 +17,7 @@
       </el-row>
     </div>
     <div style="margin-top: 20px" align="center">
-<el-button type="primary” @click ="handleSave () "> Save</el-button>
+<el-button type="primary" @click ="handleSave () "> Save</el-button>
 <el-button @click = "handleClear ()" >Empty</el-button>
     </div>
 

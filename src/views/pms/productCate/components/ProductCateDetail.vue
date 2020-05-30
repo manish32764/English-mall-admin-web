@@ -9,7 +9,7 @@
       </el-form-item>
 <el-form-item label="上级分类：">
         <el-select v-model="productCate.parentId"
-placeholder= “Please select a category” >
+placeholder= "Please select a category" >
           <el-option
             v-for="item in selectProductCateList"
             :key="item.id"
@@ -48,10 +48,10 @@ placeholder= “Please select a category” >
           v-model="filterProductAttr.value"
           :options="filterAttrs">
         </el-cascader>
-<el-button style="margin-left: 20px” @click .prevent=” removeFilterAttr (filterProductAttr) "> Delete</el-button>
+<el-button style="margin-left: 20px" @click .prevent=" removeFilterAttr (filterProductAttr) "> Delete</el-button>
       </el-form-item>
       <el-form-item>
-<el-button size="small” type="primary” @click ="handleAddFilterAttr () “> Add</el-button>
+<el-button size="small" type="primary" @click ="handleAddFilterAttr () "> Add</el-button>
       </el-form-item>
 <el-form-item label="关键词：">
         <el-input v-model="productCate.keywords"></el-input>
@@ -60,8 +60,8 @@ placeholder= “Please select a category” >
         <el-input type="textarea" :autosize="true" v-model="productCate.description"></el-input>
       </el-form-item>
       <el-form-item>
-<el-button type="primary” @click ="onSubmit ('productCateFrom') "> Submit </el-button>
-<el-button v-if=”! isEdit” @click ="resetForm ('productCateFrom') "> Reset</el-button>
+<el-button type="primary" @click ="onSubmit ('productCateFrom') "> Submit </el-button>
+<el-button v-if="! isEdit" @click ="resetForm ('productCateFrom') "> Reset</el-button>
       </el-form-item>
     </el-form>
   </el-card>

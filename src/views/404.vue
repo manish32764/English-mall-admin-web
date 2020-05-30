@@ -9,7 +9,7 @@
           <h1 class="color-main">OOPS!</h1>
 <h2 style="color: #606266">Sorry, page it accidentally lost! </h2>
 <div style="color:#909399;font-size: 14px">Please check that the URL you entered is correct, please click the button below to return to the home page. Or send an error report</div>
-<el-button style="margin-top: 20px” type="primary” round @click =” handleGoMain "> Back to Home Page</el-button>
+<el-button style="margin-top: 20px" type="primary" round @click =" handleGoMain "> Back to Home Page</el-button>
         </div>
       </el-col>
     </div>

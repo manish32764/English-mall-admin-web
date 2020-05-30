@@ -35,8 +35,8 @@ placeholder="Please select menu">
         <el-input v-model="menu.sort"></el-input>
       </el-form-item>
       <el-form-item>
-<el-button type="primary” @click ="onSubmit ('menuFrom') "> Submit </el-button>
-<el-button v-if=”! isEdit” @click ="resetForm ('menuFrom') "> Reset</el-button>
+<el-button type="primary" @click ="onSubmit ('menuFrom') "> Submit </el-button>
+<el-button v-if="! isEdit" @click ="resetForm ('menuFrom') "> Reset</el-button>
       </el-form-item>
     </el-form>
   </el-card>

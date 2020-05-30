@@ -21,10 +21,10 @@ Reset
       <div style="margin-top: 15px">
         <el-form :inline="true" :model="listQuery" size="small" label-width="140px">
 <el-form-item label="品牌名称：">
-<el-input v-model="listQuery.brandName” class="input-width” placehol der="Brand Name"> </el-input>
+<el-input v-model="listQuery.brandName" class="input-width" placehol der="Brand Name"> </el-input>
           </el-form-item>
 <el-form-item label="推荐状态：">
-<el-select v-model="listQuery.recommendation Status” placeholder="all” clea rable class="input-width ">
+<el-select v-model="listQuery.recommendation Status" placeholder="all" clea rable class="input-width ">
               <el-option v-for="item in recommendOptions"
                          :key="item.value"
                          :label="item.label"
@@ -38,7 +38,7 @@ Reset
     <el-card class="operate-container" shadow="never">
       <i class="el-icon-tickets"></i>
 <span>Data List</span>
-<el-button size= "mini” class= "btn-add” @click = "handleSelectBrand ()" > Select a Brand</el-button>
+<el-button size= "mini" class= "btn-add" @click = "handleSelectBrand ()" > Select a Brand</el-button>
     </el-card>
     <div class="table-container">
       <el-table ref="homeBrandTable"
@@ -86,7 +86,7 @@ Reset
     <div class="batch-operate-container">
       <el-select
         size="small"
-v-model="operateType” placeholder="Bulk Operation">
+v-model="operateType" placeholder="Bulk Operation">
         <el-option
           v-for="item in operates"
           :key="item.value"
@@ -115,7 +115,7 @@ OK
         :total="total">
       </el-pagination>
     </div>
-<el-dialog title="Select a brand”: visible.sync="selectDialogVisible” width=” 40% “>
+<el-dialog title="Select a brand": visible.sync="selectDialogVisible" width=" 40% ">
       <el-input v-model="dialogData.listQuery.keyword"
                 style="width: 250px;margin-bottom: 20px"
                 size="small"
@@ -149,11 +149,11 @@ Evaluation:<span class="color-main">{{scope.row.productCommentCount}}</span>
       </div>
       <div style="clear: both;"></div>
       <div slot="footer">
-<el-button size="small” @click ="selectDialogVisible = false "> Cancel </el-button>
-<el-button size="small” type="primary” @click =” handleSelectDialogConfirm () "> OK</el-button>
+<el-button size="small" @click ="selectDialogVisible = false "> Cancel </el-button>
+<el-button size="small" type="primary" @click =" handleSelectDialogConfirm () "> OK</el-button>
       </div>
     </el-dialog>
-<el-dialog title="Set Sort”
+<el-dialog title="Set Sort"
                :visible.sync="sortDialogVisible"
                width="40%">
       <el-form :model="sortDialogData"
@@ -163,8 +163,8 @@ Evaluation:<span class="color-main">{{scope.row.productCommentCount}}</span>
         </el-form-item>
       </el-form>
       <span slot="footer">
-<el-button @click ="sortDialogVisible = false” size="small” > Cancel </el-button>
-<el-button type= "primary” @click = "handleUpdateSort” size= "small" >OK. </el-button>
+<el-button @click ="sortDialogVisible = false" size="small" > Cancel </el-button>
+<el-button type= "primary" @click = "handleUpdateSort" size= "small" >OK. </el-button>
       </span>
     </el-dialog>
   </div>
@@ -201,15 +201,15 @@ label: 'Recommended',
         multipleSelection: [],
         operates: [
           {
-label: “Set as recommended”,
+label: "Set as recommended",
             value: 0
           },
           {
-label: “Cancel the recommendation”,
+label: "Cancel the recommendation",
             value: 1
           },
           {
-label: “Delete”,
+label: "Delete",
             value: 2
           }
         ],

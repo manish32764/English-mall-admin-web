@@ -21,7 +21,7 @@ Reset
       <div style="margin-top: 15px">
         <el-form :inline="true" :model="listQuery" size="small" label-width="140px">
 <el-form-item label="活动名称：">
-<el-input v-model="listQuery.keyword” class="input-width” placeholde r="Activity Name” clearable> </el-input>
+<el-input v-model="listQuery.keyword" class="input-width" placeholde r="Activity Name" clearable> </el-input>
           </el-form-item>
         </el-form>
       </div>
@@ -29,8 +29,8 @@ Reset
     <el-card class="operate-container" shadow="never">
       <i class="el-icon-tickets"></i>
 <span>Data List</span>
-<el-button size="mini” class="btn-add” @click ="handleAdd ()” style=” margin-left: 20px "> Add Activity</el-button>
-<el-button size="mini” class="btn-add” @click ="handleShowSessionList () "> Spike Time Period List</el-button>
+<el-button size="mini" class="btn-add" @click ="handleAdd ()" style=" margin-left: 20px "> Add Activity</el-button>
+<el-button size="mini" class="btn-add" @click ="handleShowSessionList () "> Spike Time Period List</el-button>
     </el-card>
     <div class="table-container">
       <el-table ref="flashTable"
@@ -95,7 +95,7 @@ Edit
       </el-pagination>
     </div>
     <el-dialog
-title="Add Activity”
+title="Add Activity"
       :visible.sync="dialogVisible"
       width="40%">
       <el-form :model="flashPromotion"
@@ -126,8 +126,8 @@ placeholder="Please select a time">
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
-<el-button @click ="dialogVisible = false” size="small "> Cancel </el-button>
-<el-button type="primary” @click ="handleDialogConfirm ()” size="small “> OK</el-button>
+<el-button @click ="dialogVisible = false" size="small "> Cancel </el-button>
+<el-button type="primary" @click ="handleDialogConfirm ()" size="small "> OK</el-button>
       </span>
     </el-dialog>
   </div>

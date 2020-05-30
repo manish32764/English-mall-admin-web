@@ -2,11 +2,11 @@
   <div class="detail-container">
     <div>
       <el-steps :active="formatStepStatus(order.status)" finish-status="success" align-center>
-<el-step title="Submit order”: description="formatTime (order.createTime) "> </el-step>
-<el-step title="Pay order”: description="formatTime (order.paymentTime) "> </el-step>
-<el-step title="Platform shipping”: description="formatTime (order.deliveryTime) "> </el-step>
-<el-step title="Confirm Receipt”: description="formatTime (order.receiveTime) "> </el-step>
-<el-step title="Complete evaluation”: description="formatTime (order.commentTime) "> </el-step>
+<el-step title="Submit order": description="formatTime (order.createTime) "> </el-step>
+<el-step title="Pay order": description="formatTime (order.paymentTime) "> </el-step>
+<el-step title="Platform shipping": description="formatTime (order.deliveryTime) "> </el-step>
+<el-step title="Confirm Receipt": description="formatTime (order.receiveTime) "> </el-step>
+<el-step title="Complete evaluation": description="formatTime (order.commentTime) "> </el-step>
       </el-steps>
     </div>
     <el-card shadow="never" style="margin-top: 15px">
@@ -14,27 +14,27 @@
         <i class="el-icon-warning color-danger" style="margin-left: 20px"></i>
 <span class="color-danger">Current order status: {{order.status | formatStatus}} </span>
         <div class="operate-button-container" v-show="order.status===0">
-<el-button size="mini” @click ="showUpdateReceiverDialog "> Modify Consignee Information </el-button>
+<el-button size="mini" @click ="showUpdateReceiverDialog "> Modify Consignee Information </el-button>
 <el-button size="mini">Modifying Product Information</el-button>
-<el-button size="mini” @click ="showUpdateMoneyDialog "> Modify Fee Information </el-button>
-<el-button size="mini” @click ="showMessageDialog” > Send a message</el-button>
-<el-button size="mini” @click ="showCloseOrderDialog "> Close order </el-button>
-<el-button size="mini” @click ="showMarkOrderDialog” > Remarks order</el-button>
+<el-button size="mini" @click ="showUpdateMoneyDialog "> Modify Fee Information </el-button>
+<el-button size="mini" @click ="showMessageDialog" > Send a message</el-button>
+<el-button size="mini" @click ="showCloseOrderDialog "> Close order </el-button>
+<el-button size="mini" @click ="showMarkOrderDialog" > Remarks order</el-button>
         </div>
         <div class="operate-button-container" v-show="order.status===1">
-<el-button size="mini” @click ="showUpdateReceiverDialog "> Modify Consignee Information </el-button>
-<el-button size="mini” @click ="showMessageDialog” > Send a message</el-button>
+<el-button size="mini" @click ="showUpdateReceiverDialog "> Modify Consignee Information </el-button>
+<el-button size="mini" @click ="showMessageDialog" > Send a message</el-button>
 <el-button size="mini">Cancel an order</el-button>
-<el-button size="mini” @click ="showMarkOrderDialog” > Remarks order</el-button>
+<el-button size="mini" @click ="showMarkOrderDialog" > Remarks order</el-button>
         </div>
         <div class="operate-button-container" v-show="order.status===2||order.status===3">
-<el-button size="mini” @click ="showLogisticsDialog "> order tracking</el-button>
-<el-button size="mini” @click ="showMessageDialog” > Send a message</el-button>
-<el-button size="mini” @click ="showMarkOrderDialog” > Remarks order</el-button>
+<el-button size="mini" @click ="showLogisticsDialog "> order tracking</el-button>
+<el-button size="mini" @click ="showMessageDialog" > Send a message</el-button>
+<el-button size="mini" @click ="showMarkOrderDialog" > Remarks order</el-button>
         </div>
         <div class="operate-button-container" v-show="order.status===4">
-<el-button size="mini” @click ="handleDeleteOrder "> Delete Order</el-button>
-<el-button size="mini” @click ="showMarkOrderDialog” > Remarks order</el-button>
+<el-button size="mini" @click ="handleDeleteOrder "> Delete Order</el-button>
+<el-button size="mini" @click ="showMarkOrderDialog" > Remarks order</el-button>
         </div>
       </div>
       <div style="margin-top: 20px">
@@ -75,7 +75,7 @@
           <el-col :span="4" class="table-cell">
             <el-popover
               placement="top-start"
-title= “activity information”
+title= "activity information"
               width="200"
               trigger="hover"
               :content="order.promotionInfo">
@@ -219,7 +219,7 @@ total:<span class="color-danger">$ {order.totalAmount}}</span>
         </el-table-column>
       </el-table>
     </el-card>
-<el-dialog title="Modify consignee information”
+<el-dialog title="Modify consignee information"
                :visible.sync="receiverDialogVisible"
                width="40%">
       <el-form :model="receiverInfo"
@@ -249,10 +249,10 @@ total:<span class="color-danger">$ {order.totalAmount}}</span>
       </el-form>
       <span slot="footer" class="dialog-footer">
 <el-button @click = "receiverDialogVisible = false" >Cancel</el-button>
-<el-button type="primary” @click ="handleUpdateReceiverInfo "> OK </el-button>
+<el-button type="primary" @click ="handleUpdateReceiverInfo "> OK </el-button>
       </span>
     </el-dialog>
-<el-dialog title="Modify fee information”
+<el-dialog title="Modify fee information"
                :visible.sync="moneyDialogVisible"
                width="40%">
       <div class="table-layout">
@@ -291,10 +291,10 @@ total:<span class="color-danger">$ {order.totalAmount}}</span>
       </div>
       <span slot="footer" class="dialog-footer">
 <el-button @click = "moneyDialogVisible = false" >Cancel</el-button>
-<el-button type="primary” @click ="handleUpdateMoneyInfo "> OK </el-button>
+<el-button type="primary" @click ="handleUpdateMoneyInfo "> OK </el-button>
       </span>
     </el-dialog>
-<el-dialog title="Sending station letter”
+<el-dialog title="Sending station letter"
                :visible.sync="messageDialogVisible"
                width="40%">
       <el-form :model="message"
@@ -310,10 +310,10 @@ total:<span class="color-danger">$ {order.totalAmount}}</span>
       </el-form>
       <span slot="footer" class="dialog-footer">
 <el-button @click = "messageDialogVisible = false" >Cancel</el-button>
-<el-button type="primary” @click ="handleSendMessage "> OK</el-button>
+<el-button type="primary" @click ="handleSendMessage "> OK</el-button>
       </span>
     </el-dialog>
-<el-dialog title="Close order”
+<el-dialog title="Close order"
                :visible.sync="closeDialogVisible"
                width="40%">
       <el-form :model="closeInfo"
@@ -325,10 +325,10 @@ total:<span class="color-danger">$ {order.totalAmount}}</span>
       </el-form>
       <span slot="footer" class="dialog-footer">
 <el-button @click = "closeDialogVisible = false" >Cancel</el-button>
-<el-button type="primary” @click ="handleCloseOrder "> OK</el-button>
+<el-button type="primary" @click ="handleCloseOrder "> OK</el-button>
       </span>
     </el-dialog>
-<el-dialog title="Remarks order”
+<el-dialog title="Remarks order"
                :visible.sync="markOrderDialogVisible"
                width="40%">
       <el-form :model="markInfo"
@@ -340,7 +340,7 @@ total:<span class="color-danger">$ {order.totalAmount}}</span>
       </el-form>
       <span slot="footer" class="dialog-footer">
 <el-button @click = "markOrderDialogVisible = false" >Cancel</el-button>
-<el-button type="primary” @click ="handleMarkOrder” > OK</el-button>
+<el-button type="primary" @click ="handleMarkOrder" > OK</el-button>
       </span>
     </el-dialog>
     <logistics-dialog v-model="logisticsDialogVisible"></logistics-dialog>

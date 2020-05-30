@@ -15,7 +15,7 @@
       </el-form-item>
 <el-form-item label="品牌故事：">
         <el-input
-placeholder= “Please enter”
+placeholder= "Please enter"
           type="textarea"
           v-model="brand.brandStory"
           :autosize="true"></el-input>
@@ -36,8 +36,8 @@ placeholder= “Please enter”
         </el-radio-group>
       </el-form-item>
       <el-form-item>
-<el-button type="primary” @click ="onSubmit ('brandFrom') "> Submit </el-button>
-<el-button v-if=”! isEdit” @click ="resetForm ('brandFrom') "> Reset</el-button>
+<el-button type="primary" @click ="onSubmit ('brandFrom') "> Submit </el-button>
+<el-button v-if="! isEdit" @click ="resetForm ('brandFrom') "> Reset</el-button>
       </el-form-item>
     </el-form>
   </el-card>

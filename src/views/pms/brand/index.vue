@@ -15,7 +15,7 @@ Search Results
         <div style="margin-top: 15px">
           <el-form :inline="true" :model="listQuery" size="small" label-width="140px">
 <el-form-item label="输入搜索：">
-<el-input style="width:203px” v-model="listQuery.keyword” placehold er= “Brand name/keyword” > </el-input>
+<el-input style="width:203px" v-model="listQuery.keyword" placehold er= "Brand name/keyword" > </el-input>
             </el-form-item>
           </el-form>
         </div>
@@ -104,7 +104,7 @@ Add
     <div class="batch-operate-container">
       <el-select
         size="small"
-v-model="operateType” placeholder="Bulk Operation">
+v-model="operateType" placeholder="Bulk Operation">
         <el-option
           v-for="item in operates"
           :key="item.value"
@@ -144,11 +144,11 @@ OK
       return {
         operates: [
           {
-label: “Show Brands”,
+label: "Show Brands",
             value: "showBrand"
           },
           {
-label: “Hidden Brand”,
+label: "Hidden Brand",
             value: "hideBrand"
           }
         ],

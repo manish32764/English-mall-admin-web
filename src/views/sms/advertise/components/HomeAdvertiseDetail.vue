@@ -21,13 +21,13 @@
 <el-form-item label="开始时间：" prop="startTime">
         <el-date-picker
           type="datetime"
-placeholder= “Select date”
+placeholder= "Select date"
           v-model="homeAdvertise.startTime"></el-date-picker>
       </el-form-item>
 <el-form-item label="到期时间：" prop="endTime">
         <el-date-picker
           type="datetime"
-placeholder= “Select date”
+placeholder= "Select date"
           v-model="homeAdvertise.endTime"></el-date-picker>
       </el-form-item>
 <el-form-item label="上线/下线：">
@@ -50,13 +50,13 @@ placeholder= “Select date”
           class="input-width"
           type="textarea"
           :rows="5"
-placeholder= “Please enter”
+placeholder= "Please enter"
           v-model="homeAdvertise.note">
         </el-input>
       </el-form-item>
       <el-form-item>
-<el-button type="primary” @click ="onSubmit ('homeAdvertiseFrom') "> Submit </el-button>
-<el-button v-if=”! isEdit” @click ="resetForm ('homeAdvertiseFrom') "> Reset</el-button>
+<el-button type="primary" @click ="onSubmit ('homeAdvertiseFrom') "> Submit </el-button>
+<el-button v-if="! isEdit" @click ="resetForm ('homeAdvertiseFrom') "> Reset</el-button>
       </el-form-item>
     </el-form>
   </el-card>

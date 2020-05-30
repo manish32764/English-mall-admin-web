@@ -21,13 +21,13 @@ Reset
       <div style="margin-top: 15px">
         <el-form :inline="true" :model="listQuery" size="small" label-width="140px">
 <el-form-item label="资源名称：">
-<el-input v-model="listQuery.nameKeyword” class="input-width” placeh older="Resource Name” clearable> </el-input>
+<el-input v-model="listQuery.nameKeyword" class="input-width" placeh older="Resource Name" clearable> </el-input>
           </el-form-item>
 <el-form-item label="资源路径：">
-<el-input v-model="listQuery.urlKeyword” class="input-width” placeho lder="Resource Path” clearable> </el-input>
+<el-input v-model="listQuery.urlKeyword" class="input-width" placeho lder="Resource Path" clearable> </el-input>
           </el-form-item>
 <el-form-item label="资源分类：">
-<el-select v-model="listQuery.categoryId” placeholder="all” clearable class="input-width ">
+<el-select v-model="listQuery.categoryId" placeholder="all" clearable class="input-width ">
               <el-option v-for="item in categoryOptions"
                          :key="item.value"
                          :label="item.label"
@@ -41,8 +41,8 @@ Reset
     <el-card class="operate-container" shadow="never">
       <i class="el-icon-tickets"></i>
 <span>Data List</span>
-<el-button size="mini” class="btn-add” @click ="handleAdd ()” style=” margin-left: 20px "> Add</el-button>
-<el-button size="mini” class="btn-add” @click ="handleShowCategory ()” > Resource Classification</el-button>
+<el-button size="mini" class="btn-add" @click ="handleAdd ()" style=" margin-left: 20px "> Add</el-button>
+<el-button size="mini" class="btn-add" @click ="handleShowCategory ()" > Resource Classification</el-button>
     </el-card>
     <div class="table-container">
       <el-table ref="resourceTable"
@@ -92,7 +92,7 @@ Edit
       </el-pagination>
     </div>
     <el-dialog
-:title="isEdit? ' Edit Resource ': 'Add Resource'”
+:title="isEdit? ' Edit Resource ': 'Add Resource'"
       :visible.sync="dialogVisible"
       width="40%">
       <el-form :model="resource"
@@ -105,7 +105,7 @@ Edit
           <el-input v-model="resource.url" style="width: 250px"></el-input>
         </el-form-item>
 <el-form-item label="资源分类：">
-<el-select v-model="resource.categoryId” placeholder="All” clearable style="width:250px ">
+<el-select v-model="resource.categoryId" placeholder="All" clearable style="width:250px ">
             <el-option v-for="item in categoryOptions"
                        :key="item.value"
                        :label="item.label"
@@ -121,8 +121,8 @@ Edit
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
-<el-button @click ="dialogVisible = false” size="small "> Cancel </el-button>
-<el-button type="primary” @click ="handleDialogConfirm ()” size="small “> OK</el-button>
+<el-button @click ="dialogVisible = false" size="small "> Cancel </el-button>
+<el-button type="primary" @click ="handleDialogConfirm ()" size="small "> OK</el-button>
       </span>
     </el-dialog>
   </div>

@@ -10,7 +10,7 @@
           style="display: inline-block"
           filterable
           :filter-method="filterMethod"
-filter-placeholder="Please enter the theme name”
+filter-placeholder="Please enter the theme name"
           v-model="selectSubject"
           :titles="subjectTitles"
           :data="subjectList">
@@ -21,15 +21,15 @@ filter-placeholder="Please enter the theme name”
           style="display: inline-block"
           filterable
           :filter-method="filterMethod"
-filter-placeholder="Please enter preferred name”
+filter-placeholder="Please enter preferred name"
           v-model="selectPrefrenceArea"
           :titles="prefrenceAreaTitles"
           :data="prefrenceAreaList">
         </el-transfer>
       </el-form-item>
       <el-form-item style="text-align: center">
-<el-button size="medium” @click ="handlePrev "> Previous, fill in product attributes</el-button>
-<el-button type= "primary” size= "medium” @click = "handleFinishCommit" > Done, Submit Item</el-button>
+<el-button size="medium" @click ="handlePrev "> Previous, fill in product attributes</el-button>
+<el-button type= "primary" size= "medium" @click = "handleFinishCommit" > Done, Submit Item</el-button>
       </el-form-item>
     </el-form>
   </div>

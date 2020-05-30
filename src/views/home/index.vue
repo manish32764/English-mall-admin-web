@@ -223,9 +223,9 @@
               type="daterange"
               align="right"
               unlink-panels
-range-separator="To”
-start-placeholder= “Start Date”
-end-placeholder= “End Date”
+range-separator="To"
+start-placeholder= "Start Date"
+end-placeholder= "End Date"
               @change="handleDateChange"
               :picker-options="pickerOptions">
             </el-date-picker>

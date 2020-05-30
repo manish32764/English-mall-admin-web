@@ -58,7 +58,7 @@ Add
     <div class="batch-operate-container">
       <el-select
         size="small"
-v-model="operateType” placeholder="Bulk Operation">
+v-model="operateType" placeholder="Bulk Operation">
         <el-option
           v-for="item in operates"
           :key="item.value"
@@ -108,7 +108,7 @@ OK
         multipleSelection: [],
         operates: [
           {
-label: “Delete”,
+label: "Delete",
             value: "deleteProductAttr"
           }
         ]

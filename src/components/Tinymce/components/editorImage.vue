@@ -1,7 +1,7 @@
 <template>
   <div class="upload-container">
     <el-button icon='el-icon-upload' size="mini" :style="{background:color,borderColor:color}"
-@click =” dialogVisible=true” type="primary” > Upload Image
+@click =" dialogVisible=true" type="primary" > Upload Image
     </el-button>
     <el-dialog append-to-body :visible.sync="dialogVisible">
       <el-upload class="editor-slide-upload"
@@ -17,7 +17,7 @@
 <el-button size="small" type="primary">Click Upload</el-button>
       </el-upload>
 <el-button @click = "dialogVisible = false" >Cancel</el-button>
-<el-button type="primary” @click ="handleSubmit” > OK</el-button>
+<el-button type="primary" @click ="handleSubmit" > OK</el-button>
     </el-dialog>
   </div>
 </template>

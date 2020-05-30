@@ -285,7 +285,7 @@ meta: {title: 'Add ad'},
         path: 'updateAdvertise',
         name: 'updateHomeAdvertise',
         component: () => import('@/views/sms/advertise/update'),
-meta: {title: 'Edit ad},
+meta: {title: 'Edit ad'},
         hidden:true
       }
     ]

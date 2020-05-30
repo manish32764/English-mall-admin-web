@@ -53,7 +53,7 @@ class="btn-add "> Add
     <div class="batch-operate-container">
       <el-select
         size="small"
-v-model="operateType” placeholder="Bulk Operation">
+v-model="operateType" placeholder="Bulk Operation">
         <el-option
           v-for="item in operateOptions"
           :key="item.value"
@@ -83,7 +83,7 @@ OK
       </el-pagination>
     </div>
     <el-dialog
-title= “Add reason for return”
+title= "Add reason for return"
       :visible.sync="dialogVisible" width="30%">
       <el-form :model="returnReason"
                ref="reasonForm" label-width="150px">
@@ -99,7 +99,7 @@ title= “Add reason for return”
       </el-form>
       <span slot="footer" class="dialog-footer">
 <el-button @click = "dialogVisible = false" >Cancel</el-button>
-<el-button type="primary” @click ="handleConfirm” > OK</el-button>
+<el-button type="primary" @click ="handleConfirm" > OK</el-button>
       </span>
     </el-dialog>
   </div>
@@ -129,7 +129,7 @@ title= “Add reason for return”
         operateType:null,
         operateOptions: [
           {
-label: “Delete”,
+label: "Delete",
             value: 1
           }
         ],

@@ -89,7 +89,7 @@ placeholder="Select end time">
         </div>
         <div class="littleMargin">
 Promotional Price:
-<el-input style="width:220px” v-model="value.promotionPrice” placeh older= “Enter promotional price” > </el-input>
+<el-input style="width:220px" v-model="value.promotionPrice" placeh older= "Enter promotional price" > </el-input>
         </div>
 
       </el-form-item>
@@ -103,7 +103,7 @@ Promotional Price:
         <el-table :data="value.productLadderList"
                   style="width: 80%" border>
           <el-table-column
-label= “quantity”
+label= "quantity"
             align="center"
             width="120">
             <template slot-scope="scope">
@@ -111,7 +111,7 @@ label= “quantity”
             </template>
           </el-table-column>
           <el-table-column
-label= “Discount”
+label= "Discount"
             align="center"
             width="120">
             <template slot-scope="scope">
@@ -122,8 +122,8 @@ label= “Discount”
             align="center"
 label="Operation ">
             <template slot-scope="scope">
-<el-button type="text” @click ="handleRemoveProductLadder (scope. $index, scope.row) "> Delete</el-button>
-<el-button type="text” @click ="handleAddProductLadder (scope. $index, scope.row) "> Add</el-button>
+<el-button type="text" @click ="handleRemoveProductLadder (scope. $index, scope.row) "> Delete</el-button>
+<el-button type="text" @click ="handleAddProductLadder (scope. $index, scope.row) "> Add</el-button>
             </template>
           </el-table-column>
         </el-table>
@@ -132,7 +132,7 @@ label="Operation ">
         <el-table :data="value.productFullReductionList"
                   style="width: 80%" border>
           <el-table-column
-label="full”
+label="full"
             align="center"
             width="120">
             <template slot-scope="scope">
@@ -140,7 +140,7 @@ label="full”
             </template>
           </el-table-column>
           <el-table-column
-label= “vertical minus”
+label= "vertical minus"
             align="center"
             width="120">
             <template slot-scope="scope">
@@ -151,15 +151,15 @@ label= “vertical minus”
             align="center"
 label="Operation ">
             <template slot-scope="scope">
-<el-button type="text” @click ="handleRemoveFullreduction (scope. $index, scope.row) "> Delete</el-button>
-<el-button type="text” @click ="handleAddFullreduction (scope. $index, scope.row) "> Add</el-button>
+<el-button type="text" @click ="handleRemoveFullreduction (scope. $index, scope.row) "> Delete</el-button>
+<el-button type="text" @click ="handleAddFullreduction (scope. $index, scope.row) "> Add</el-button>
             </template>
           </el-table-column>
         </el-table>
       </el-form-item>
       <el-form-item style="text-align: center">
-<el-button size="medium” @click ="handlePrev "> Previous, fill in the product information</el-button>
-<el-button type= "primary” size= "medium” @click = "handleNext" >Next, fill in the product </el-button>attribute
+<el-button size="medium" @click ="handlePrev "> Previous, fill in the product information</el-button>
+<el-button type= "primary" size= "medium" @click = "handleNext" >Next, fill in the product </el-button>attribute
       </el-form-item>
     </el-form>
   </div>

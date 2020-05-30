@@ -17,7 +17,7 @@
         <el-select
           v-model="value.brandId"
           @change="handleBrandChange"
-placeholder= “Please select a brand” >
+placeholder= "Please select a brand" >
           <el-option
             v-for="item in brandOptions"
             :key="item.value"
@@ -56,7 +56,7 @@ placeholder="Please enter content"></el-input>
         <el-input v-model="value.sort"></el-input>
       </el-form-item>
       <el-form-item style="text-align: center">
-<el-button type="primary” size="medium” @click ="handleNext (' productInfoForm') "> Next, fill in product promotion</el-button>
+<el-button type="primary" size="medium" @click ="handleNext (' productInfoForm') "> Next, fill in product promotion</el-button>
       </el-form-item>
     </el-form>
   </div>

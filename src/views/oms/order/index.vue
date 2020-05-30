@@ -21,10 +21,10 @@ Reset
       <div style="margin-top: 15px">
         <el-form :inline="true" :model="listQuery" size="small" label-width="140px">
 <el-form-item label="输入搜索：">
-<el-input v-model="listQuery.orderSn” class="input-width” placeholde r= “order id” > </el-input>
+<el-input v-model="listQuery.orderSn" class="input-width" placeholde r= "order id" > </el-input>
           </el-form-item>
 <el-form-item label="收货人：">
-<el-input v-model="listQuery.receiverKeyword” class="input-width” pl aceholder= “Consignee name/mobile number” > </el-input>
+<el-input v-model="listQuery.receiverKeyword" class="input-width" pl aceholder= "Consignee name/mobile number" > </el-input>
           </el-form-item>
 <el-form-item label="提交时间：">
             <el-date-picker
@@ -36,7 +36,7 @@ placeholder="Please select a time">
             </el-date-picker>
           </el-form-item>
 <el-form-item label="订单状态：">
-<el-select v-model="listQuery.status” class="input-width” placeholde r= “All” clearable>
+<el-select v-model="listQuery.status" class="input-width" placeholde r= "All" clearable>
               <el-option v-for="item in statusOptions"
                          :key="item.value"
                          :label="item.label"
@@ -45,7 +45,7 @@ placeholder="Please select a time">
             </el-select>
           </el-form-item>
 <el-form-item label="订单分类：">
-<el-select v-model="listQuery.orderType” class="input-width” placeho lder="All” clearable>
+<el-select v-model="listQuery.orderType" class="input-width" placeho lder="All" clearable>
               <el-option v-for="item in orderTypeOptions"
                          :key="item.value"
                          :label="item.label"
@@ -54,7 +54,7 @@ placeholder="Please select a time">
             </el-select>
           </el-form-item>
 <el-form-item label="订单来源：">
-<el-select v-model="listQuery.sourceType” class="input-width” placeh older="All” clearable>
+<el-select v-model="listQuery.sourceType" class="input-width" placeh older="All" clearable>
               <el-option v-for="item in sourceTypeOptions"
                          :key="item.value"
                          :label="item.label"
@@ -130,7 +130,7 @@ v-show="scope.row.status==4"> Delete order</el-button>
     <div class="batch-operate-container">
       <el-select
         size="small"
-v-model="operateType” placeholder="Bulk Operation">
+v-model="operateType" placeholder="Bulk Operation">
         <el-option
           v-for="item in operateOptions"
           :key="item.value"
@@ -160,19 +160,19 @@ OK
       </el-pagination>
     </div>
     <el-dialog
-title= “Close order”
+title= "Close order"
       :visible.sync="closeOrder.dialogVisible" width="30%">
 <span style="vertical-align: top">Action Note:</span>
       <el-input
         style="width: 80%"
         type="textarea"
         :rows="5"
-placeholder= “Please enter”
+placeholder= "Please enter"
         v-model="closeOrder.content">
       </el-input>
       <span slot="footer" class="dialog-footer">
 <el-button @click = "closeOrder.dialogVisible = false" >Cancel</el-button>
-<el-button type="primary” @click ="handleCloseOrderConfirm "> OK </el-button>
+<el-button type="primary" @click ="handleCloseOrderConfirm "> OK </el-button>
       </span>
     </el-dialog>
     <logistics-dialog v-model="logisticsDialogVisible"></logistics-dialog>
@@ -252,15 +252,15 @@ label: 'APP orde',
         ],
         operateOptions: [
           {
-label: “Bulk shipping”,
+label: "Bulk shipping",
             value: 1
           },
           {
-label: “Close order”,
+label: "Close order",
             value: 2
           },
           {
-label: “Delete order”,
+label: "Delete order",
             value: 3
           }
         ],

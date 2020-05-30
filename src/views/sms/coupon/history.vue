@@ -57,7 +57,7 @@ Reset
       <div style="margin-top: 15px">
         <el-form :inline="true" :model="listQuery" size="small" label-width="140px">
 <el-form-item label="使用状态：">
-<el-select v-model="listQuery.useStatus” placeholder="All” clearable class="input-width ">
+<el-select v-model="listQuery.useStatus" placeholder="All" clearable class="input-width ">
               <el-option v-for="item in useTypeOptions"
                          :key="item.value"
                          :label="item.label"
@@ -66,7 +66,7 @@ Reset
             </el-select>
           </el-form-item>
 <el-form-item label="订单编号：">
-<el-input v-model="listQuery.orderSn” class="input-width” placeholde r= “order id” > </el-input>
+<el-input v-model="listQuery.orderSn" class="input-width" placeholde r= "order id" > </el-input>
           </el-form-item>
         </el-form>
       </div>
@@ -145,15 +145,15 @@ label: 'Registration voucher',
   };
   const defaultUseTypeOptions= [
     {
-label: “Not used”,
+label: "Not used",
       value: 0
     },
     {
-label: “Used”,
+label: "Used",
       value: 1
     },
     {
-label: “Expired”,
+label: "Expired",
       value: 2
     }
   ];

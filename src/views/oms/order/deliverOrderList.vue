@@ -25,7 +25,7 @@
         </el-table-column>
 <el-table-column label="配送方式" width="160" align="center">
           <template slot-scope="scope">
-<el-select placeholder="Please select a logistics company”
+<el-select placeholder="Please select a logistics company"
                        v-model="scope.row.deliveryCompany"
                        size="small">
               <el-option v-for="item in companyOptions"
@@ -44,14 +44,14 @@
       </el-table>
       <div style="margin-top: 15px;text-align: center">
 <el-button @click = "cancel" >Cancel</el-button>
-<el-button @click ="confirm” type="primary” > OK</el-button>
+<el-button @click ="confirm" type="primary" > OK</el-button>
       </div>
     </div>
   </div>
 </template>
 <script>
   import {deliveryOrder} from '@/api/order'
-const defaultLogisticsCompanies= ["S.F. Express”, “Yuantong Express”, “Zhongtong Express”, “Da Express”];
+const defaultLogisticsCompanies= ["S.F. Express", "Yuantong Express", "Zhongtong Express", "Da Express"];
   export default {
     name: 'deliverOrderList',
     data() {

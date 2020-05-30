@@ -47,43 +47,43 @@
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.id}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Application Status </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Application Status </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.status | formatStatus}}</el-col>
         </el-row>
         <el-row>
-<el-col: span="6" class="form-border form-left-bg font-small” style= “height: 50px; line-height: 30px” > order number
+<el-col: span="6" class="form-border form-left-bg font-small" style= "height: 50px; line-height: 30px" > order number
           </el-col>
           <el-col class="form-border font-small" :span="18" style="height:50px">
             {{orderReturnApply.orderSn}}
-<el-button type= "text” size= "small” @click = "handleViewOrder" >View </el-button>
+<el-button type= "text" size= "small" @click = "handleViewOrder" >View </el-button>
           </el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Application Time </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Application Time </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.createTime | formatTime}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> User account </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> User account </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.memberUsername}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Contact </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Contact </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.returnName}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Contact phone number </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Contact phone number </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.returnPhone}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Return reason </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Return reason </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.reason}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Problem description </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Problem description </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.description}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6" style= “height: 100px; line-height: 80px” > voucher image
+<el-col class="form-border form-left-bg font-small": span="6" style= "height: 100px; line-height: 80px" > voucher image
           </el-col>
           <el-col class="form-border font-small" :span="18" style="height:100px">
             <img v-for="item in proofPics" style="width:80px;height:80px" :src="item">
@@ -92,11 +92,11 @@
       </div>
       <div class="form-container-border">
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> order amount </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> order amount </el-col>
           <el-col class="form-border font-small" :span="18">￥{{totalAmount}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6" style= “height: 52px; line-height: 32px” > Refund Confirmation
+<el-col class="form-border form-left-bg font-small": span="6" style= "height: 52px; line-height: 32px" > Refund Confirmation
           </el-col>
           <el-col class="form-border font-small" style="height:52px" :span="18">
             ￥
@@ -107,7 +107,7 @@
         </el-row>
         <div v-show="orderReturnApply.status!==3">
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6" style= “height: 52px; line-height: 32px” > Select a receiving point
+<el-col class="form-border form-left-bg font-small": span="6" style= "height: 52px; line-height: 32px" > Select a receiving point
           </el-col>
           <el-col class="form-border font-small" style="height:52px" :span="18">
             <el-select size="small"
@@ -123,54 +123,54 @@
           </el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> consignee name </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> consignee name </el-col>
           <el-col class="form-border font-small" :span="18">{{currentAddress.name}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Area </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Area </el-col>
           <el-col class="form-border font-small" :span="18">{{currentAddress | formatRegion}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Details </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Details </el-col>
           <el-col class="form-border font-small" :span="18">{{currentAddress.detailAddress}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Contact phone number </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Contact phone number </el-col>
           <el-col class="form-border font-small" :span="18">{{currentAddress.phone}}</el-col>
         </el-row>
         </div>
       </div>
       <div class="form-container-border" v-show="orderReturnApply.status!==0">
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Process Person </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Process Person </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.handleMan}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Processing Time </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Processing Time </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.handleTime | formatTime}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Handling Remarks </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Handling Remarks </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.handleNote}}</el-col>
         </el-row>
       </div>
       <div class="form-container-border" v-show="orderReturnApply.status===2">
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Receiving Person </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Receiving Person </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.receiveMan}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6" > Receipt Time </el-col>
+<el-col class="form-border form-left-bg font-small": span="6" > Receipt Time </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.receiveTime | formatTime}}</el-col>
         </el-row>
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6"> Receiving Remarks </el-col>
+<el-col class="form-border form-left-bg font-small": span="6"> Receiving Remarks </el-col>
           <el-col class="form-border font-small" :span="18">{{orderReturnApply.receiveNote}}</el-col>
         </el-row>
       </div>
       <div class="form-container-border" v-show="orderReturnApply.status===0">
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6" style= “height: 52px; line-height: 32px” > Handling Remarks</el-col>
+<el-col class="form-border form-left-bg font-small": span="6" style= "height: 52px; line-height: 32px" > Handling Remarks</el-col>
           <el-col class="form-border font-small" :span="18">
             <el-input  size="small" v-model="updateStatusParam.handleNote" style="width:200px;margin-left: 10px"></el-input>
           </el-col>
@@ -178,18 +178,18 @@
       </div>
       <div class="form-container-border" v-show="orderReturnApply.status===1">
         <el-row>
-<el-col class="form-border form-left-bg font-small”: span="6" style= “height: 52px; line-height: 32px” > Receipt Remarks</el-col>
+<el-col class="form-border form-left-bg font-small": span="6" style= "height: 52px; line-height: 32px" > Receipt Remarks</el-col>
           <el-col class="form-border font-small" :span="18">
             <el-input  size="small" v-model="updateStatusParam.receiveNote" style="width:200px;margin-left: 10px"></el-input>
           </el-col>
         </el-row>
       </div>
       <div style="margin-top:15px;text-align: center" v-show="orderReturnApply.status===0">
-<el-button type="primary” size="small” @click ="handleUpdateStatus (1) “> Confirm Return</el-button>
-<el-button type="danger” size="small” @click ="handleUpdateStatus (3)” > Refusal of Returns</el-button>
+<el-button type="primary" size="small" @click ="handleUpdateStatus (1) "> Confirm Return</el-button>
+<el-button type="danger" size="small" @click ="handleUpdateStatus (3)" > Refusal of Returns</el-button>
       </div>
       <div style="margin-top:15px;text-align: center" v-show="orderReturnApply.status===1">
-<el-button type="primary” size="small” @click ="handleUpdateStatus (2) “> Confirm Receipt</el-button>
+<el-button type="primary" size="small" @click ="handleUpdateStatus (2) "> Confirm Receipt</el-button>
       </div>
     </el-card>
   </div>
@@ -277,13 +277,13 @@
     filters: {
       formatStatus(status) {
         if (status === 0) {
-return “Pending”;
+return "Pending";
         } else if (status === 1) {
-return “in return”;
+return "in return";
         } else if (status === 2) {
-return “Completed”;
+return "Completed";
         } else {
-return “Rejected”;
+return "Rejected";
         }
       },
       formatTime(time) {

@@ -15,7 +15,7 @@
                     type="text"
                     v-model="loginForm.username"
                     autoComplete="on"
-placeholder= “Please enter username” >
+placeholder= "Please enter username" >
           <span slot="prefix">
             <svg-icon icon-class="user" class="color-main"></svg-icon>
           </span>
@@ -48,7 +48,7 @@ Get an Experience Account
     </el-card>
     <img :src="login_center_bg" class="login-center-layout">
     <el-dialog
-title= “public number QR code”
+title= "public number QR code"
       :visible.sync="dialogVisible"
       :show-close="false"
       :center="true"
@@ -59,7 +59,7 @@ title= “public number QR code”
         <img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/banner/qrcode_for_macrozheng_258.jpg" width="160" height="160" style="margin-top: 10px">
       </div>
       <span slot="footer" class="dialog-footer">
-<el-button type="primary” @click ="dialogConfirm” > OK</el-button>
+<el-button type="primary" @click ="dialogConfirm" > OK</el-button>
       </span>
     </el-dialog>
   </div>

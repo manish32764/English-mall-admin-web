@@ -3,7 +3,7 @@
     <el-form :model="value" ref="productAttrForm" label-width="120px" style="width: 720px" size="small">
 <el-form-item label="属性类型：">
         <el-select v-model="value.productAttributeCategoryId"
-placeholder="Please select attribute type”
+placeholder="Please select attribute type"
                    @change="handleProductAttrChange">
           <el-option
             v-for="item in productAttributeCategoryOptions"
@@ -26,12 +26,12 @@ placeholder="Please select attribute type”
                 <div v-for="(item,index) in selectProductAttr[idx].options" style="display: inline-block"
                      class="littleMarginLeft">
                   <el-checkbox :label="item" :key="item"></el-checkbox>
-<el-button type="text” class="littleMarginLeft” @click =” handleRemoveProductAttrValue (idx, index) "> Delete
+<el-button type="text" class="littleMarginLeft" @click =" handleRemoveProductAttrValue (idx, index) "> Delete
                   </el-button>
                 </div>
               </el-checkbox-group>
               <el-input v-model="addProductAttrValue" style="width: 160px;margin-left: 10px" clearable></el-input>
-<el-button class="littleMarginLeft” @click =” handleAddProductAttrValue (idx) "> Add</el-button>
+<el-button class="littleMarginLeft" @click =" handleAddProductAttrValue (idx) "> Add</el-button>
             </div>
           </div>
         </el-card>
@@ -48,7 +48,7 @@ placeholder="Please select attribute type”
             </template>
           </el-table-column>
           <el-table-column
-label= “Selling Price”
+label= "Selling Price"
             width="80"
             align="center">
             <template slot-scope="scope">
@@ -56,7 +56,7 @@ label= “Selling Price”
             </template>
           </el-table-column>
           <el-table-column
-label= “Product inventory”
+label= "Product inventory"
             width="80"
             align="center">
             <template slot-scope="scope">
@@ -64,7 +64,7 @@ label= “Product inventory”
             </template>
           </el-table-column>
           <el-table-column
-label= “Inventory alert value”
+label= "Inventory alert value"
             width="80"
             align="center">
             <template slot-scope="scope">
@@ -72,14 +72,14 @@ label= “Inventory alert value”
             </template>
           </el-table-column>
           <el-table-column
-label="SKU number”
+label="SKU number"
             align="center">
             <template slot-scope="scope">
               <el-input v-model="scope.row.skuCode"></el-input>
             </template>
           </el-table-column>
           <el-table-column
-label="Operation”
+label="Operation"
             width="80"
             align="center">
             <template slot-scope="scope">
@@ -103,7 +103,7 @@ label="Operation”
         <el-button
           type="primary"
           style="margin-top: 20px"
-@click ="handleSyncProductSkuStock” > Sync Inventory
+@click ="handleSyncProductSkuStock" > Sync Inventory
         </el-button>
       </el-form-item>
 <el-form-item label="属性图片：" v-if="hasAttrPic">
@@ -145,8 +145,8 @@ label="Operation”
         </el-tabs>
       </el-form-item>
       <el-form-item style="text-align: center">
-<el-button size="medium” @click ="handlePrev "> Previous, fill in Product Promotion</el-button>
-<el-button type= "primary” size= "medium” @click = "handleNext" >Next, select the product </el-button>association
+<el-button size="medium" @click ="handlePrev "> Previous, fill in Product Promotion</el-button>
+<el-button type= "primary" size= "medium" @click = "handleNext" >Next, select the product </el-button>association
       </el-form-item>
     </el-form>
   </div>

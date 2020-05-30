@@ -3,7 +3,7 @@
     <el-card class="operate-container" shadow="never">
       <i class="el-icon-tickets"></i>
 <span>Data List</span>
-<el-button size="mini” class="btn-add” @click ="handleSelectProduct () “style="margin-left: 20px" > Add</el-button>
+<el-button size="mini" class="btn-add" @click ="handleSelectProduct () "style="margin-left: 20px" > Add</el-button>
     </el-card>
     <div class="table-container">
       <el-table ref="productRelationTable"
@@ -67,7 +67,7 @@
         :total="total">
       </el-pagination>
     </div>
-<el-dialog title="Select a product”: visible.sync="selectDialogVisible” width=” 50% “>
+<el-dialog title="Select a product": visible.sync="selectDialogVisible" width=" 50% ">
       <el-input v-model="dialogData.listQuery.keyword"
                 style="width: 250px;margin-bottom: 20px"
                 size="small"
@@ -101,11 +101,11 @@ placeholder="Product Name Search">
       </div>
       <div style="clear: both;"></div>
       <div slot="footer">
-<el-button size="small” @click ="selectDialogVisible = false "> Cancel </el-button>
-<el-button size="small” type="primary” @click =” handleSelectDialogConfirm () "> OK</el-button>
+<el-button size="small" @click ="selectDialogVisible = false "> Cancel </el-button>
+<el-button size="small" type="primary" @click =" handleSelectDialogConfirm () "> OK</el-button>
       </div>
     </el-dialog>
-<el-dialog title="Edit Lightning Deal Listings”
+<el-dialog title="Edit Lightning Deal Listings"
       :visible.sync="editDialogVisible"
       width="40%">
       <el-form :model="flashProductRelation"
@@ -139,8 +139,8 @@ placeholder="Product Name Search">
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
-<el-button @click ="editDialogVisible = false” size="small” > Cancel </el-button>
-<el-button type="primary” @click ="handleEditDialogConfirm ()” size=” small "> OK</el-button>
+<el-button @click ="editDialogVisible = false" size="small" > Cancel </el-button>
+<el-button type="primary" @click ="handleEditDialogConfirm ()" size=" small "> OK</el-button>
       </span>
     </el-dialog>
   </div>

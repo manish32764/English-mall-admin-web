@@ -5,7 +5,7 @@
         <el-input v-model="productAttr.name"></el-input>
       </el-form-item>
 <el-form-item label="商品类型：">
-<el-select v-model="productAttr.productAttributeCategoryId” placehol der= “Please select” >
+<el-select v-model="productAttr.productAttributeCategoryId" placehol der= "Please select" >
           <el-option
             v-for="item in productAttrCateList"
             :key="item.id"
@@ -59,8 +59,8 @@
         <el-input v-model="productAttr.sort"></el-input>
       </el-form-item>
       <el-form-item>
-<el-button type="primary” @click ="onSubmit ('productAttrFrom') "> Submit </el-button>
-<el-button v-if=”! isEdit” @click ="resetForm ('productAttrFrom') "> Reset</el-button>
+<el-button type="primary" @click ="onSubmit ('productAttrFrom') "> Submit </el-button>
+<el-button v-if="! isEdit" @click ="resetForm ('productAttrFrom') "> Reset</el-button>
       </el-form-item>
     </el-form>
   </el-card>

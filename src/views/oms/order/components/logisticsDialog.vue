@@ -1,5 +1,5 @@
 <template> 
-<el-dialog title="order tracking”
+<el-dialog title="order tracking"
              :visible.sync="visible"
              :before-close="handleClose"
              width="40%">

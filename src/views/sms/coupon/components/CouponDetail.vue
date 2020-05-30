@@ -29,28 +29,28 @@
         </el-select>
       </el-form-item>
 <el-form-item label="总发行量：" prop="publishCount">
-<el-input v-model.number="coupon.publishCount” placeholder="Only positive integers can be entered” class="input-width "> </el-input>
+<el-input v-model.number="coupon.publishCount" placeholder="Only positive integers can be entered" class="input-width "> </el-input>
       </el-form-item>
 <el-form-item label="面额：" prop="amount">
-<el-input v-model.number="coupon.amount” placeholder="face value can only be numeric, limited to 2 decimal places” class="input-width ">
+<el-input v-model.number="coupon.amount" placeholder="face value can only be numeric, limited to 2 decimal places" class="input-width ">
 <template slot="append">Meta</template>
         </el-input>
       </el-form-item>
 <el-form-item label="每人限领：">
-<el-input v-model="coupon.perLimit” placeholder="Only positive integers can be entered” class="inp ut-width ">
+<el-input v-model="coupon.perLimit" placeholder="Only positive integers can be entered" class="inp ut-width ">
 <template slot="append">Zhang</template>
         </el-input>
       </el-form-item>
 <el-form-item label="使用门槛：" prop="minPoint">
-<el-input v-model.number="coupon.minPoint” placeholder="positive integer only” cla s="input-width ">
+<el-input v-model.number="coupon.minPoint" placeholder="positive integer only" cla s="input-width ">
 <template slot="prepend">full</template>
 <template slot="append">Meta Available</template>
         </el-input>
       </el-form-item>
 <el-form-item label="有效期：">
-<el-date-picker type="date” placeholder="Select date” v-model="coupon.start Time” style="width:150px "> </el-date-picker>
+<el-date-picker type="date" placeholder="Select date" v-model="coupon.start Time" style="width:150px "> </el-date-picker>
 <span style="margin-left: 20px;margin-right: 20px">To</span>
-<el-date-picker type="date” placeholder="Select date” v-model="coupon.endTi me” style="width:150px "> </el-date-picker>
+<el-date-picker type="date" placeholder="Select date" v-model="coupon.endTi me" style="width:150px "> </el-date-picker>
       </el-form-item>
 <el-form-item label="可使用商品：">
         <el-radio-group v-model="coupon.useType">
@@ -62,7 +62,7 @@
       <el-form-item v-show="coupon.useType===1">
         <el-cascader
           clearable
-placeholder= "Please select category name”
+placeholder= "Please select category name"
           v-model="selectProductCate"
           :options="productCateOptions">
         </el-cascader>
@@ -90,7 +90,7 @@ placeholder= "Please select category name”
           filterable
           remote
           reserve-keyword
-placeholder= “Product name/item number”
+placeholder= "Product name/item number"
           :remote-method="searchProductMethod"
           :loading="selectProductLoading">
           <el-option
@@ -128,13 +128,13 @@ placeholder= “Product name/item number”
           class="input-width"
           type="textarea"
           :rows="5"
-placeholder= “Please enter”
+placeholder= "Please enter"
           v-model="coupon.note">
         </el-input>
       </el-form-item>
       <el-form-item>
-<el-button type="primary” @click ="onSubmit ('couponFrom') "> Submit </el-button>
-<el-button v-if=”! isEdit” @click ="resetForm ('couponFrom') "> Reset</el-button>
+<el-button type="primary" @click ="onSubmit ('couponFrom') "> Submit </el-button>
+<el-button v-if="! isEdit" @click ="resetForm ('couponFrom') "> Reset</el-button>
       </el-form-item>
     </el-form>
   </el-card>

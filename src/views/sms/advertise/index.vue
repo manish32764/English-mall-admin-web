@@ -21,10 +21,10 @@ Reset
       <div style="margin-top: 15px">
         <el-form :inline="true" :model="listQuery" size="small" label-width="140px">
 <el-form-item label="广告名称：">
-<el-input v-model="listQuery.name” class="input-width” placeholder=” Ad Name "> </el-input>
+<el-input v-model="listQuery.name" class="input-width" placeholder=" Ad Name "> </el-input>
           </el-form-item>
 <el-form-item label="广告位置：">
-<el-select v-model="listQuery.type” placeholder="all” clearable class ="input-width ">
+<el-select v-model="listQuery.type" placeholder="all" clearable class ="input-width ">
               <el-option v-for="item in typeOptions"
                          :key="item.value"
                          :label="item.label"
@@ -47,7 +47,7 @@ placeholder="Please select a time">
     <el-card class="operate-container" shadow="never">
       <i class="el-icon-tickets"></i>
 <span>Data List</span>
-<el-button size= "mini” class= "btn-add” @click = "handleAdd ()" >Add Ads </el-button>
+<el-button size= "mini" class= "btn-add" @click = "handleAdd ()" >Add Ads </el-button>
     </el-card>
     <div class="table-container">
       <el-table ref="homeAdvertiseTable"
@@ -107,7 +107,7 @@ placeholder="Please select a time">
     <div class="batch-operate-container">
       <el-select
         size="small"
-v-model="operateType” placeholder="Bulk Operation">
+v-model="operateType" placeholder="Bulk Operation">
         <el-option
           v-for="item in operates"
           :key="item.value"
@@ -170,7 +170,7 @@ label: 'APP Home Road',
         multipleSelection: [],
         operates: [
           {
-label: “Delete”,
+label: "Delete",
             value: 0
           }
         ],

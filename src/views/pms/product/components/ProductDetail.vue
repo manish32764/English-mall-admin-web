@@ -75,9 +75,9 @@
     previewStatus: 0,
     price: 0,
     productAttributeCategoryId: null,
-//productAttributeId: 0, value: “}
+//productAttributeId: 0, value: "}
     productAttributeValueList: [],
-//product sku inventory information {lowStock: 0, pic: “, price: 0, sale: 0, skuCode: “, spData: “, stock: 0}
+//product sku inventory information {lowStock: 0, pic: ", price: 0, sale: 0, skuCode: ", spData: ", stock: 0}
     skuStockList: [],
 //commodity issue {subjectId: 0}
     subjectProductRelationList: [],

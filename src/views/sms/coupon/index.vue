@@ -21,10 +21,10 @@ Reset
       <div style="margin-top: 15px">
         <el-form :inline="true" :model="listQuery" size="small" label-width="140px">
 <el-form-item label="优惠券名称：">
-<el-input v-model="listQuery.name” class="input-width” placeholder=” Coupon Name "> </el-input>
+<el-input v-model="listQuery.name" class="input-width" placeholder=" Coupon Name "> </el-input>
           </el-form-item>
 <el-form-item label="优惠券类型：">
-<el-select v-model="listQuery.type” placeholder="all” clearable class ="input-width ">
+<el-select v-model="listQuery.type" placeholder="all" clearable class ="input-width ">
               <el-option v-for="item in typeOptions"
                          :key="item.value"
                          :label="item.label"
@@ -38,7 +38,7 @@ Reset
     <el-card class="operate-container" shadow="never">
       <i class="el-icon-tickets"></i>
 <span>Data List</span>
-<el-button size= "mini” class= "btn-add” @click = "handleAdd ()" >Add </el-button>
+<el-button size= "mini" class= "btn-add" @click = "handleAdd ()" >Add </el-button>
     </el-card>
     <div class="table-container">
       <el-table ref="couponTable"

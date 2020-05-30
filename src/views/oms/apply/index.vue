@@ -21,10 +21,10 @@ Reset
       <div style="margin-top: 15px">
         <el-form :inline="true" :model="listQuery" size="small" label-width="140px">
 <el-form-item label="输入搜索：">
-<el-input v-model="listQuery.id” class="input-width” placeholder="Service Single Number "> </el-input>
+<el-input v-model="listQuery.id" class="input-width" placeholder="Service Single Number "> </el-input>
           </el-form-item>
 <el-form-item label="处理状态：">
-<el-select v-model="listQuery.status” placeholder="all” clearable cla s="input-width ">
+<el-select v-model="listQuery.status" placeholder="all" clearable cla s="input-width ">
               <el-option v-for="item in statusOptions"
                          :key="item.value"
                          :label="item.label"
@@ -42,7 +42,7 @@ placeholder="Please select a time">
             </el-date-picker>
           </el-form-item>
 <el-form-item label="操作人员：">
-<el-input v-model="listQuery.handleMan” class="input-width” placehol der="All "> </el-input>
+<el-input v-model="listQuery.handleMan" class="input-width" placehol der="All "> </el-input>
           </el-form-item>
 <el-form-item label="处理时间：">
             <el-date-picker
@@ -97,7 +97,7 @@ placeholder="Please select a time">
     <div class="batch-operate-container">
       <el-select
         size="small"
-v-model="operateType” placeholder="Bulk Operation">
+v-model="operateType" placeholder="Bulk Operation">
         <el-option
           v-for="item in operateOptions"
           :key="item.value"
@@ -172,7 +172,7 @@ label: 'Rejed',
         operateType:1,
         operateOptions: [
           {
-label: “Bulk Delete”,
+label: "Bulk Delete",
             value: 1
           }
         ],

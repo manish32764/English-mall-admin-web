@@ -3,7 +3,7 @@
     <el-card shadow="never" class="operate-container">
       <i class="el-icon-tickets"></i>
 <span>Data List</span>
-<el-button size= "mini” class= "btn-add” @click = "handleAdd ()" >Add </el-button>
+<el-button size= "mini" class= "btn-add" @click = "handleAdd ()" >Add </el-button>
     </el-card>
     <div class="table-container">
       <el-table ref="flashSessionTable"
@@ -47,7 +47,7 @@
       </el-table>
     </div>
     <el-dialog
-title= “Add time period”
+title= "Add time period"
       :visible.sync="dialogVisible"
       width="40%">
       <el-form :model="flashSession"
@@ -76,8 +76,8 @@ placeholder="Please select a time">
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
-<el-button @click ="dialogVisible = false” size="small "> Cancel </el-button>
-<el-button type="primary” @click ="handleDialogConfirm ()” size="small “> OK</el-button>
+<el-button @click ="dialogVisible = false" size="small "> Cancel </el-button>
+<el-button type="primary" @click ="handleDialogConfirm ()" size="small "> OK</el-button>
       </span>
     </el-dialog>
   </div>
